@@ -3,10 +3,15 @@ import java.util.Scanner;
 public class Runner
 	{
 static Scanner scan = new Scanner(System.in);
+static int r=0;
+static ArrayList<Integer> q=new ArrayList<Integer>(0);
+
+
+
+
+
 		public static void main(String[] args)
 			{
-				int r=0;
-				ArrayList<Integer> q=new ArrayList<Integer>(0);
 				System.out.println("Hello, please type numbers to be put into an array. \nThe program will continue when you input -1. \nAll other numbers input must be between 1 and 20 inclusive.");
 				while (true){
 					r=scan.nextInt();
@@ -22,8 +27,9 @@ static Scanner scan = new Scanner(System.in);
 				}
 				q.sort(null);
 				for (int i:q){
-					System.out.println(i);
+					System.out.print(i+"  ");
 				}
+				System.out.println();
 			
 				int t=(int)(Math.random()*q.size());
 				System.out.println("your target is "+q.get(t)+".\n");
